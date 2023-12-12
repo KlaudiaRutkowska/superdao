@@ -1,0 +1,265 @@
+@import '_variables.scss';
+
+header {
+    background-color: black;
+    position: fixed;
+
+    padding-top: 16px;
+    padding-bottom: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 700;
+
+    @media only screen and (min-width: 960px) {
+        padding-top: 46px;
+        padding-bottom: 46px;
+    }
+
+    .logo {
+        display: flex;
+        align-items: center;
+        column-gap: 0.813rem;
+
+        img {
+            width: 60px;
+            height: 35px;
+        }
+
+        p {
+            font-size: 1.75rem;
+            line-height: 200%;
+            letter-spacing: 0.032rem;
+        }
+    }
+
+    #hamburger {
+        position: relative;
+        z-index: 2;
+        display: block;
+        width: 40px;
+        height: 40px;
+        background-color: transparent;
+        border-width: 0;
+
+        div {
+            display: block;
+            width: 24px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translateX(-50%) translateY(-50%);
+
+            span {
+                position: absolute;
+                display: block;
+                width: 24px;
+                height: 2px;
+                background-color: #fff;
+                transition-duration: 500ms;
+                transition-timing-function: ease-in-out;
+
+                &:first-child {
+                    transition-property: transform;
+                    transform: translateY(-6px);
+                }
+
+                &:last-child {
+                    transition-property: transform;
+                    transform: translateY(6px);
+                }
+            }
+        }
+
+        &.open {
+            div {
+                span {
+                    &:first-child {
+                        transform: rotate(45deg) translateY(0);
+                    }
+
+                    &:not(:first-child):not(:last-child) {
+                        opacity: 0;
+                    }
+
+                    &:last-child {
+                        transform: rotate(-45deg) translateY(0);
+                    }
+                }
+            }
+        }
+
+        @media only screen and (min-width: 960px) {
+            display: none;
+        }
+    }
+
+    nav.opened {
+        transform: translateX(0);
+        visibility: visible;
+    }
+
+    nav {
+        padding-inline: 20px;
+        padding-top: 65px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 32px;
+        align-items: stretch;
+        visibility: hidden;
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        background-color: $bg-nav;
+        height: 100vh;
+
+        transition-property: transform, visibility;
+        transition-timing-function: linear;
+        transition-duration: 100ms;
+        transform: translateX(100%);
+        transform-origin: top;
+
+        @media only screen and (min-width: 960px) {
+            padding-inline: 0;
+            padding-top: 0;
+            position: static;
+            flex-direction: row;
+            align-items: center;
+            justify-content: end;
+            column-gap: 4rem;
+            visibility: visible;
+            height: auto;
+            background-color: transparent;
+            transform: translateX(0);
+        }
+
+        ul {
+            font-size: 15px;
+            line-height: 32px;
+
+            display: flex;
+            flex-direction: column;
+            row-gap: 16px;
+            column-gap: 0;
+            padding-top: 20px;
+            list-style-type: none;
+
+            @media only screen and (min-width: 960px) {
+                font-size: 18px;
+                line-height: 36px;
+
+                position: static;
+                flex-direction: row;
+                row-gap: 0;
+                column-gap: 40px;
+                padding-top: 0;
+            }
+
+            @media only screen and (min-width: 1140px) {
+                column-gap: 52px;
+            }
+
+            li {
+                @media only screen and (max-width: 959px) {
+                    background-color: $bg-nav-li;
+                    border-radius: 12px;
+
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    padding-left: 20px;
+                }
+            }
+        }
+
+        .logo-menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            column-gap: 0.813rem;
+
+            @media only screen and (min-width: 960px) {
+                display: none;
+            }
+    
+            img {
+                width: 64px;
+                height: 38px;
+            }
+    
+            p {
+                font-size: 21px;
+                font-weight: 700;
+                line-height: 200%;
+                letter-spacing: 0.384px;
+            }
+        }
+
+        .socialmedia {
+            display: flex;
+            flex-direction: column;
+            align-items: stretch;
+            row-gap: 16px;
+
+            .twitter,
+            .telegram,
+            .email {
+                background-color: rgba($color: #fff, $alpha: 0.1);
+                color: white;
+                font-weight: 700;
+                font-size: 15px;
+                line-height: 32px;
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                column-gap: 0.5rem;
+                border-width: 0;
+                border-radius: 12px;
+
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-inline: 20px;
+                cursor: pointer;
+
+                svg.icon-left {
+                    display: none;
+                }
+
+                svg.icon-right {
+                    display: block;
+                }
+
+                @media only screen and (min-width: 960px) {
+                    font-size: 16px;
+                    line-height: 28px;
+
+                    justify-content: start;
+                    padding-top: 6px;
+                    padding-bottom: 6px;
+                    padding-left: 12px;
+                    padding-right: 16px;
+
+                    border-radius: 8px;
+                    background-color: $bg-btn-twitter;
+
+                    svg.icon-left {
+                        display: block;
+                    }
+
+                    svg.icon-right {
+                        display: none;
+                    }
+
+                    &.email,
+                    &.telegram {
+                        display: none;
+                    }
+                }
+            }
+        }
+    }
+}
