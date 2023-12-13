@@ -1,8 +1,11 @@
 @import '_variables.scss';
 
 header {
-    background-color: black;
+    // background-color: black;
     position: fixed;
+    z-index: 1;
+    backdrop-filter: blur(20px);
+    // -webkit-mask: linear-gradient(to top, transparent, black 50%);
 
     padding-top: 16px;
     padding-bottom: 16px;
