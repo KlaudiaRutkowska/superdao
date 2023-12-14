@@ -1,11 +1,14 @@
 @import '_reset-css.scss';
 @import '_responsive.scss';
 @import '_fonts.scss';
+@import 'variables.scss';
 @import '_header.scss';
 @import '_hero.scss';
+@import '_roadmap-club.scss';
 
 body {
     color: white;
+    background-color: $bg;
 }
 
 .container {
@@ -15,7 +18,52 @@ body {
     margin-left: auto;
 }
 
+button {
+    color: white;
+    font-size: 16px;
+    line-height: 32px;
+    font-weight: 700;
+
+    background: $btn-bg-white-opacity;
+    border-width: 0;
+    border-radius: 16px;
+    padding-inline: 40px;
+    padding-block: 16px;
+    cursor: pointer;
+
+    @media only screen and (min-width: 960px) {
+        font-size: 18px;
+        line-height: 36px;
+    }
+
+    @media only screen and (min-width: 1140px) {
+        font-size: 20px;
+    }
+
+    &.btn-yellow {
+        color: black;
+        background: $btn-bg-yellow;
+        box-shadow: $btn-shadow-yellow;
+    }
+}
+
 a {
     text-decoration-line: none;
     color: white;
+}
+
+h2 {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 700;
+
+    @media only screen and (min-width: 960px) {
+        font-size: 36px;
+        line-height: 60px;
+    }
+
+    @media only screen and (min-width: 1140px) {
+        font-size: 40px;
+        line-height: 70px;
+    }
 }

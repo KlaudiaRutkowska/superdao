@@ -1,0 +1,165 @@
+@import "_variables.scss";
+
+#roadmap-club {
+    
+    .container > div {
+        position: relative;
+        z-index: 0;
+        
+        .roadmap-club-wrapper {
+            padding: 16px;
+
+            background: $bg-roadmap-club;
+            border-radius: 16px;
+            
+            @media only screen and (min-width: 960px) {
+                padding-inline: 52px;
+                padding-top: 36px;
+                padding-bottom: 52px;
+    
+                border-radius: 24px;
+            }
+    
+            @media only screen and (min-width: 1140px) {
+                padding-inline: 80px;
+                padding-top: 52px;
+                padding-bottom: 70px;
+            }
+        }
+
+        h2 {
+            margin-bottom: 8px;
+
+            @media only screen and (min-width: 1140px) {
+                margin-bottom: 4px;
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: -0.3px;
+            font-weight: 400;
+            margin-bottom: 20px;
+
+            @media only screen and (min-width: 960px) {
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: normal;
+                margin-bottom: 28px;
+            }
+
+            @media only screen and (min-width: 1140px) {
+                font-size: 20px;
+                line-height: 36px;
+                margin-bottom: 20px;
+            }
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+            margin-bottom: 28px;
+
+            @media only screen and (min-width: 960px) {
+                margin-bottom: 40px;
+            }
+
+            @media only screen and (min-width: 1140px) {
+                margin-bottom: 44px;
+            }
+
+            li {
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 700;
+
+                background-image: url("../images/bullet-icon.svg");
+                background-repeat: no-repeat;
+                background-position: 0 center;
+                background-size: 16px 16px;
+
+                padding-left: 28px;
+
+                @media only screen and (min-width: 960px) {
+                    font-size: 18px;
+                    line-height: 32px;
+
+                    background-size: 20px 20px;
+                    padding-left: 32px;
+                }
+
+                @media only screen and (min-width: 1140px) {
+                    font-size: 20px;
+                    line-height: 36px;
+
+                    background-size: 24px 24px;
+                    padding-left: 36px;
+                }
+            }
+
+            li:not(:last-child) {
+                margin-bottom: 10px;
+
+                @media only screen and (min-width: 960px) {
+                    margin-bottom: 12px;
+                }
+            }
+        }
+
+        .button-group {
+            display: flex;
+            flex-direction: column;
+            row-gap: 12px;
+            column-gap: 0;
+
+            @media only screen and (min-width: 960px) {
+                flex-direction: row;
+                column-gap: 16px;
+                row-gap: 0;
+            }
+
+            @media only screen and (min-width: 1140px) {
+                column-gap: 28px;
+            }
+        }
+    }
+
+    .container > div::before {
+        display: none;
+
+        @media only screen and (min-width: 1140px) {
+            display: block;
+            content: "";
+            position: absolute;
+            z-index: -10;
+            background-image: url("../images/Element_3.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 222px;
+            height: 222px;
+
+            right: -111px;
+            top: -111px;
+        }
+    }
+
+    .container > div::after {
+        display: none;
+
+        @media only screen and (min-width: 1140px) {
+            display: block;
+            content: "";
+            position: absolute;
+            z-index: -10;
+            background-image: url("../images/Element_4.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            width: 118px;
+            height: 118px;
+
+            left: -47px;
+            bottom: -33px;
+        }
+    }
+}
