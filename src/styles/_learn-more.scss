@@ -1,0 +1,159 @@
+@import "variables.scss";
+
+#learn-more {
+    margin-top: 80px;
+    margin-bottom: 80px;
+
+    @media only screen and (min-width: 1140px) {
+        margin-top: 160px;
+        margin-bottom: 180px;
+    }
+
+    .container > div {
+        display: flex;
+        flex-direction: column;
+        row-gap: 28px;
+
+        position: relative;
+
+        @media only screen and (min-width: 960px) {
+            row-gap: 44px;
+        }
+
+        @media only screen and (min-width: 1140px) {
+            row-gap: 52px;
+        }
+
+        h2 {
+            font-size: 24px;
+            line-height: 28px;
+            text-align: center;
+            font-weight: 700;
+
+            position: relative;
+
+            @media only screen and (min-width: 960px) {
+                font-size: 40px;
+                line-height: 52px;
+            }
+
+            @media only screen and (min-width: 1140px) {
+                font-size: 48px;
+                line-height: 92px;
+            }
+
+            span {
+                position: relative;
+            }
+
+            span::after {
+                content: "";
+                background-image: url("../images/underline-learn-more.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 165px;
+                height: 12px;
+                position: absolute;
+                z-index: -1;
+                bottom: -1px;
+                left: -10px;
+
+                @media only screen and (min-width: 960px) {
+                    width: 289px;
+                    height: 21px;
+                    bottom: -2px;
+                    left: -25px;
+                }
+
+                @media only screen and (min-width: 1140px) {
+                    width: 344px;
+                    height: 25px;
+                }
+            }
+        }
+
+        .card-wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: 32px;
+            column-gap: 0;
+
+            @media only screen and (min-width: 960px) {
+                flex-direction: row;
+                justify-content: space-between;
+                row-gap: 0;
+                column-gap: 28px;
+            }
+
+            .card {
+                background-color: $bg-card;
+                max-width: 368px;
+                border-radius: 16px;
+
+                @media only screen and (min-width: 960px) {
+                    width: 226px;
+                }
+
+                @media only screen and (min-width: 1140px) {
+                    width: 350px;
+                }
+
+                img {
+                    width: 368px;
+                    height: 200px;
+                    object-fit: cover;
+                    border-top-left-radius: 16px;
+                    border-top-right-radius: 16px;
+
+                    @media only screen and (min-width: 960px) {
+                        width: 350px;
+                    }
+                }
+
+                .text-wrapper {
+                    padding: 20px 24px 24px 28px;
+
+                    p:first-child {
+                        color: $text-yellow-color;
+                        font-size: 15px;
+                        line-height: 36px;
+                        letter-spacing: 0.4px;
+                        font-weight: 700;
+                        text-transform: uppercase;
+                    }
+
+                    p:last-child {
+                        font-size: 16px;
+                        line-height: 24px;
+                        font-weight: 700;
+
+                        @media only screen and (min-width: 1140px) {
+                            font-size: 20px;
+                            line-height: 32px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &::after {
+            display: none;
+    
+            @media only screen and (min-width: 1920px) {
+                display: block;
+                content: "";
+                position: absolute;
+                z-index: -10;
+                background-image: url("../images/element_5.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 166px;
+                height: 166px;
+    
+                right: -163px;
+                bottom: -131px;
+            }
+        }
+    }
+}
