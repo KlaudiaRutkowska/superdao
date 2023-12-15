@@ -5,7 +5,17 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     width: 100vw;
-    height: 100vh;
+    height: 65vh;
+
+    @media only screen and (min-width: 960px) {
+        width: 100vw;
+        height: 70vh;
+    }
+
+    @media only screen and (min-width: 1140px) {
+        width: 100vw;
+        height: 100vh;
+    }
 
     div {
         padding-top: 96px;
