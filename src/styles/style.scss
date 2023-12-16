@@ -135,4 +135,5 @@ h2 {
     transform: translateX(0);
     opacity: 1;
     filter: blur(0);
+    transition-delay: calc(100ms * var(--order));
 }
