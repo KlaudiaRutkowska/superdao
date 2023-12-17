@@ -3,6 +3,7 @@
 @import "_fonts.scss";
 @import "variables.scss";
 @import "_header.scss";
+@import "_creators.scss";
 @import "_hero.scss";
 @import "_roadmap-club.scss";
 @import "_learn-more.scss";
@@ -94,7 +95,6 @@ h2 {
     &.underline {
         font-size: 24px;
         line-height: 28px;
-        text-align: center;
         font-weight: 700;
 
         position: relative;
@@ -109,17 +109,27 @@ h2 {
             line-height: 92px;
         }
 
-        & > span {
-            position: relative;
+        &::after {
+            content: "";
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+}
 
-            &::after {
-                content: "";
-                background-image: url("../images/underline_sponsors.svg");
-                background-repeat: no-repeat;
-                background-size: contain;
-                position: absolute;
-                z-index: -1;
-            }
+h1, h2 {
+    & > span {
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-size: contain;
         }
     }
 }
