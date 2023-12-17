@@ -12,6 +12,8 @@
     .container > div {
         display: flex;
         flex-direction: column;
+        // align-items: center;
+
         row-gap: 28px;
 
         position: relative;
@@ -24,27 +26,35 @@
             row-gap: 52px;
         }
 
-        h2 > span::after {
-            background-image: url("../images/underline-learn-more.svg");
-            width: 165px;
-            height: 12px;
-            bottom: -1px;
-            left: -10px;
+        h2 {
+            align-self: center;
 
-            @media only screen and (min-width: 960px) {
-                width: 289px;
-                height: 21px;
-                bottom: -2px;
-                left: -25px;
-            }
+            &::after {
+                background-image: url("../images/underline-learn-more.svg");
+                width: 165px;
+                height: 12px;
+                bottom: -1px;
+                left: -10px;
 
-            @media only screen and (min-width: 1140px) {
-                width: 344px;
-                height: 25px;
+                @media only screen and (min-width: 960px) {
+                    width: 289px;
+                    height: 21px;
+                    bottom: 2px;
+                    left: -25px;
+                }
+
+                @media only screen and (min-width: 1140px) {
+                    width: 344px;
+                    height: 25px;
+                    bottom: 16px;
+                    left: -30px;
+                }
             }
         }
 
         .card-wrapper {
+            // align-self: stretch;
+
             display: flex;
             flex-direction: column;
             align-items: center;
