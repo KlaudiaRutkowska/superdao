@@ -10,6 +10,7 @@
     .container {
         display: flex;
         flex-direction: column;
+        align-items: center;
 
         h2 {
             margin-bottom: 32px;
@@ -22,8 +23,8 @@
                 margin-bottom: 44px;
             }
 
-            & > ::after {
-                content: "";
+            &::after {
+                background-image: url("../images/underline_sponsors.svg");
                 width: 163px;
                 height: 14px;
                 bottom: -1px;
@@ -32,13 +33,15 @@
                 @media only screen and (min-width: 960px) {
                     width: 267px;
                     height: 23px;
-                    bottom: -2px;
-                    left: -20px;
+                    bottom: -1px;
+                    left: -15px;
                 }
 
                 @media only screen and (min-width: 1140px) {
                     width: 337px;
                     height: 29px;
+                    bottom: 12px;
+                    left: -15px;
                 }
             }
         }
