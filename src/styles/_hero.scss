@@ -4,6 +4,7 @@
     background-image: url(../images/bg-hero.jpg);
     background-repeat: no-repeat;
     background-attachment: fixed;
+    background-size: cover;
     width: 100vw;
     height: 65vh;
 
@@ -51,20 +52,10 @@
                 margin-right: 90px;
             }
 
-            span {
-                position: relative;
-                z-index: 0;
-            }
-
-            span::after {
-                content: "";
+            & > span::after {
                 background-image: url("../images/underline-hero.svg");
-                background-repeat: no-repeat;
-                background-size: contain;
                 width: 101px;
                 height: 15px;
-                position: absolute;
-                z-index: -1;
                 bottom: -2px;
                 left: -6px;
 
