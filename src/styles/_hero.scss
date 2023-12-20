@@ -6,30 +6,35 @@
     background-attachment: fixed;
     background-size: cover;
     width: 100vw;
-    height: 65vh;
+    height: 100vh;
+    margin-bottom: 1px;
 
-    @media only screen and (min-width: 960px) {
-        width: 100vw;
-        height: 70vh;
-    }
 
-    @media only screen and (min-width: 1140px) {
-        width: 100vw;
-        height: 100vh;
-    }
+    // @media only screen and (min-width: 960px) {
+    //     width: 100vw;
+    //     height: 70vh;
+    // }
 
-    div {
+    // @media only screen and (min-width: 1140px) {
+    //     width: 100vw;
+    //     height: 100vh;
+    // }
+
+    & > .container {
         padding-top: 96px;
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        padding-top: 72px;
+        height: 100%;
 
         @media only screen and (min-width: 960px) {
-            padding-top: 188px;
+            padding-top: 137.018px;
         }
 
         @media only screen and (min-width: 1140px) {
-            padding-top: 288px;
+            padding-top: 148px;
         }
 
         h1 {
@@ -42,14 +47,13 @@
 
             @media only screen and (min-width: 960px) {
                 font-size: 52px;
-                line-height: 60px;
+                line-height: 65px;
             }
 
             @media only screen and (min-width: 1140px) {
                 font-size: 72px;
                 line-height: 80px;
-                margin-left: 90px;
-                margin-right: 90px;
+                max-width: 60%;
             }
 
             & > span::after {
@@ -80,6 +84,7 @@
             margin-left: 40px;
             margin-right: 40px;
             margin-top: 16px;
+            max-width: 70%;
 
             @media only screen and (min-width: 1140px) {
                 font-size: 24px;
@@ -87,6 +92,7 @@
                 margin-left: 200px;
                 margin-right: 200px;
                 margin-top: 32px;
+                max-width: 50%;
             }
         }
 
