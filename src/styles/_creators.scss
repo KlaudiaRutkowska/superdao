@@ -3,10 +3,14 @@
 #creators {
     margin-bottom: 80px;
 
-    .container {
+    .container > .wrapper {
         display: flex;
         flex-direction: column;
+        justify-content: center;
         align-items: center;
+        position: relative;
+
+        // height: 100%;
 
         @media only screen and (min-width: 1140px) {
             margin-bottom: 200px;
@@ -57,18 +61,20 @@
             }
         }
 
-        & > .packs-wrapper {
+        .packs-wrapper {
             display: flex;
             flex-direction: column;
             row-gap: 24px;
-            
+            margin-bottom: 80px;
+
             @media only screen and (min-width: 960px) {
+                margin-bottom: 60px;
                 flex-direction: row;
                 column-gap: 64px;
             }
-            
+
             @media only screen and (min-width: 1140px) {
-                column-gap: 126px;
+                margin-bottom: 100px;
             }
 
             & > .pack {
@@ -92,7 +98,7 @@
                     & > img {
                         @media only screen and (min-width: 960px) {
                             width: 20px;
-                            height: 20px;  
+                            height: 20px;
                         }
 
                         @media only screen and (min-width: 1140px) {
@@ -114,7 +120,7 @@
                         line-height: 32px;
                         margin-bottom: 8px;
                     }
-                    
+
                     @media only screen and (min-width: 1140px) {
                         font-size: 24px;
                         line-height: 36px;
@@ -129,12 +135,468 @@
                         font-size: 16px;
                         line-height: 28px;
                     }
-                    
+
                     @media only screen and (min-width: 1140px) {
                         font-size: 20px;
                         line-height: 32px;
                     }
                 }
+            }
+        }
+
+        .technologies-wrapper {
+            align-self: normal;
+
+            background: $bg-creators-technologies;
+            border-radius: 24px;
+            border: 3px solid $border-creators-technologies-color;
+
+            display: flex;
+            flex-direction: column;
+            row-gap: 32px;
+
+            padding: 14px 16px;
+
+            @media only screen and (min-width: 960px) {
+                row-gap: 40px;
+                padding: 36px;
+            }
+
+            @media only screen and (min-width: 1140px) {
+                row-gap: 60px;
+                padding: 80px;
+                padding-top: 70px;
+            }
+
+            .apps-wrapper,
+            .superdao-operating-system-wrapper,
+            .blockchains-wrapper {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                row-gap: 16px;
+
+                @media only screen and (min-width: 960px) {
+                    row-gap: 24px;
+                }
+
+                @media only screen and (min-width: 1140px) {
+                    row-gap: 28px;
+                }
+
+                & > h3 {
+                    color: $text-yellow-color;
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight: 700;
+                    text-align: center;
+
+                    position: relative;
+                    padding-left: 24px;
+
+                    @media only screen and (min-width: 960px) {
+                        font-size: 24px;
+                        line-height: 36px;
+                        padding-left: 28px;
+                    }
+
+                    @media only screen and (min-width: 1140px) {
+                        font-size: 28px;
+                        padding-left: 32px;
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        background-image: url("../images/bullet-icon.svg");
+                        background-repeat: no-repeat;
+                        background-size: 16px 16px;
+                        width: 16px;
+                        height: 16px;
+                        left: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+
+                        @media only screen and (min-width: 960px) {
+                            background-size: 20px 20px;
+                            width: 20px;
+                            height: 20px;
+                        }
+
+                        @media only screen and (min-width: 1140px) {
+                            background-size: 24px 24px;
+                            width: 24px;
+                            height: 24px;
+                        }
+                    }
+                }
+            }
+
+            .apps-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 16px;
+
+                .app {
+                    background: $bg-container;
+                    border-radius: 4px;
+                    padding: 0;
+                    padding-left: 24px;
+                    padding-right: 8px;
+
+                    position: relative;
+
+                    @media only screen and (min-width: 960px) {
+                        border-radius: 12px;
+                        padding: 10px;
+                        padding-left: 56px;
+                        padding-right: 20px;
+                    }
+
+                    @media only screen and (min-width: 1140px) {
+                        padding: 12px;
+                        padding-left: 64px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        line-height: 24px;
+                        font-weight: 700;
+
+                        @media only screen and (min-width: 960px) {
+                            font-size: 16px;
+                            line-height: 32px;
+                        }
+
+                        @media only screen and (min-width: 1140px) {
+                            font-size: 18px;
+                        }
+                    }
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        z-index: -1;
+                        border-radius: 100%;
+                        width: 8px;
+                        height: 8px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: 8px;
+
+                        @media only screen and (min-width: 960px) {
+                            width: 18px;
+                            height: 18px;
+                            left: 17px;
+                        }
+
+                        @media only screen and (min-width: 1140px) {
+                            width: 20px;
+                            height: 20px;
+                            left: 18px;
+                        }
+                    }
+
+                    &::after {
+                        display: none;
+                        content: "";
+                        position: absolute;
+                        z-index: -2;
+                        border-radius: 8px;
+                        width: 18px;
+                        height: 18px;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        left: -20px;
+
+                        @media only screen and (min-width: 960px) {
+                            display: block;
+                            width: 36px;
+                            height: 36px;
+                            left: 8px;
+                        }
+
+                        @media only screen and (min-width: 1140px) {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+
+                    &.yellow {
+                        &::before {
+                            background-color: $yellow-dot;
+                        }
+
+                        &::after {
+                            background-color: $yellow-bg;
+                        }
+                    }
+
+                    &.orange {
+                        &::before {
+                            background-color: $orange-dot;
+                        }
+
+                        &::after {
+                            background-color: $orange-bg;
+                        }
+                    }
+
+                    &.blue {
+                        &::before {
+                            background-color: $blue-dot;
+                        }
+
+                        &::after {
+                            background-color: $blue-bg;
+                        }
+                    }
+
+                    &.purple {
+                        &::before {
+                            background-color: $purple-dot;
+                        }
+
+                        &::after {
+                            background-color: $purple-bg;
+                        }
+                    }
+
+                    &.pink {
+                        &::before {
+                            background-color: $pink-dot;
+                        }
+
+                        &::after {
+                            background-color: $pink-bg;
+                        }
+                    }
+
+                    &.green {
+                        &::before {
+                            background-color: $green-dot;
+                        }
+
+                        &::after {
+                            background-color: $green-bg;
+                        }
+                    }
+
+                    &.light-green {
+                        &::before {
+                            background-color: $light-green-dot;
+                        }
+
+                        &::after {
+                            background-color: $light-green-bg;
+                        }
+                    }
+                }
+            }
+
+            .superdao-operating-system-container {
+                display: flex;
+                flex-direction: column;
+                row-gap: 16px;
+
+                @media only screen and (min-width: 960px) {
+                    flex-direction: row;
+                    column-gap: 24px;
+                }
+
+                @media only screen and (min-width: 1140px) {
+                    column-gap: 42px;
+                }
+
+                & > div {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    background-color: $bg-container;
+                    border-radius: 16px;
+                    padding-inline: 16px;
+                    padding-block: 12px;
+
+                    @media only screen and (min-width: 960px) {
+                        flex: 1 1 310px;
+                        flex-grow: 1;
+                        flex-shrink: 1;
+
+                        padding-inline: 24px;
+                        padding-bottom: 32px;
+                        padding-top: 36px;
+                    }
+
+                    @media only screen and (min-width: 1140px) {
+                        flex: 1 1 430px;
+
+                        padding-inline: 32px;
+                    }
+
+                    & > img {
+                        display: none;
+
+                        @media only screen and (min-width: 960px) {
+                            display: block;
+                            width: 48px;
+                            height: 48px;
+                            margin-bottom: 16px;
+                        }
+
+                        @media only screen and (min-width: 1140px) {
+                            width: 52px;
+                            height: 52px;
+                        }
+                    }
+
+                    & > h4 {
+                        color: $text-yellow-color;
+                        font-size: 18px;
+                        line-height: 24px;
+                        font-weight: 700;
+
+                        margin-bottom: 4px;
+
+                        @media only screen and (min-width: 960px) {
+                            font-size: 22px;
+                            line-height: 36px;
+                        }
+
+                        @media only screen and (min-width: 1140px) {
+                            font-size: 24px;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    & > p {
+                        font-size: 14px;
+                        line-height: 24px;
+                        text-align: center;
+
+                        @media only screen and (min-width: 960px) {
+                            font-size: 16px;
+                            line-height: 28px;
+                        }
+
+                        @media only screen and (min-width: 1140px) {
+                            font-size: 20px;
+                            line-height: 32px;
+                        }
+                    }
+                }
+            }
+
+            .blockchains-container {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+
+                @media only screen and (min-width: 960px) {
+                    gap: 16px;
+                }
+
+                @media only screen and (min-width: 1140px) {
+                    gap: 24px;
+                }
+
+                & > div {
+                    flex: 1 1 122px;
+
+                    display: flex;
+                    align-items: center;
+                    column-gap: 8px;
+
+                    background-color: $bg-container;
+                    padding-block: 8px;
+                    padding-inline: 8px;
+                    border-radius: 16px;
+
+                    @media only screen and (min-width: 960px) {
+                        column-gap: 12px;
+                        padding-block: 12px;
+                        padding-inline: 16px;
+                        flex-basis: 154px;
+                    }
+
+                    @media only screen and (min-width: 1140px) {
+                        column-gap: 16px;
+                        padding-block: 16px;
+                        padding-inline: 24px;
+                        border-radius: 16px;
+                        flex-basis: 208px;
+                    }
+
+                    img {
+                        width: 28px;
+                        height: 28px;
+
+                        @media only screen and (min-width: 960px) {
+                            width: 32px;
+                            height: 32px;
+                        }
+
+                        @media only screen and (min-width: 1140px) {
+                            width: 44px;
+                            height: 44px;
+                        }
+                    }
+
+                    p {
+                        font-size: 12px;
+                        line-height: 24px;
+                        font-weight: 700;
+
+                        @media only screen and (min-width: 960px) {
+                            font-size: 14px;
+                        }
+
+                        @media only screen and (min-width: 1140px) {
+                            font-size: 18px;
+                            line-height: 32px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &::before {
+            display: none;
+
+            @media only screen and (min-width: 1920px) {
+                display: block;
+                content: "";
+                position: absolute;
+                z-index: -10;
+                background-image: url("../images/element-2.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 150px;
+                height: 150px;
+
+                left: -270px;
+                top: 941px;
+            }
+        }
+
+        &::after {
+            display: none;
+
+            @media only screen and (min-width: 1920px) {
+                display: block;
+                content: "";
+                position: absolute;
+                z-index: -10;
+                background-image: url("../images/element-1.svg");
+                background-repeat: no-repeat;
+                background-size: contain;
+                width: 100px;
+                height: 100px;
+
+                right: -200px;
+                top: 317px;
             }
         }
     }

@@ -2,12 +2,44 @@
 $bg: #10151A;
 $text-yellow-color: #FFD600;
 
-
 // header colors
 $bg-nav: #222930;
 $bg-btn-twitter: #262e37;
 $twitter: #00ACEE;
 $bg-nav-li: rgba($color: #fff, $alpha: 0.1);
+
+//creators
+$bg-creators-technologies: rgba(255, 255, 255, 0.02);
+$border-creators-technologies-color: #FFD12F;
+$bg-container: rgba(255, 255, 255, 0.1);
+
+//yellow app
+$yellow-dot: #ffe501;
+$yellow-bg: rgba($yellow-dot, 0.15);
+
+//orange app
+$orange-dot: #FF792E;
+$orange-bg: rgba($orange-dot, 0.15);
+
+//blue app
+$blue-dot: #21A6FA;
+$blue-bg: rgba($blue-dot, 0.15);
+
+//purple app
+$purple-dot: #D04BFF;
+$purple-bg: rgba($purple-dot, 0.15);
+
+//green app
+$green-dot: #01FFB3;
+$green-bg: rgba($green-dot, 0.15);
+
+//light-green app
+$light-green-dot: #86F045;
+$light-green-bg: rgba($light-green-dot, 0.15);
+
+//pink app
+$pink-dot: #FF49B6;
+$pink-bg: rgba($pink-dot, 0.15);
 
 //roadmap-club colors
 $bg-roadmap-club: linear-gradient(123deg, #A96BF7 2.02%, #3103B5 101.68%);
