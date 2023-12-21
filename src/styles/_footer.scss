@@ -2,13 +2,12 @@ footer {
     background: $bg-footer;
 
     .container {
-        // justify-content: space-between;
         display: grid;
         grid-template-rows: auto auto;
         grid-template-columns: repeat(2, auto);
-        row-gap: 24px;
+        row-gap: 1.5rem;
 
-        padding-block: 24px;
+        padding-block: 1.5rem;
 
         @media only screen and (min-width: 960px) {
             grid-template-rows: auto;
@@ -16,11 +15,11 @@ footer {
             place-content: space-between;
             row-gap: 0;
 
-            padding-block: 32px;
+            padding-block: 2rem;
         }
 
         @media only screen and (min-width: 1140px) {
-            padding-block: 42px;
+            padding-block: 2.625rem;
         }
 
         .logo {
@@ -32,17 +31,17 @@ footer {
             align-items: center;
 
             img {
-                width: 35.78px;
-                height: 21.14px;
+                width: 2.236rem;
+                height: 1.321rem;
 
                 @media only screen and (min-width: 960px) {
-                    width: 48px;
-                    height: 28.36px;
+                    width: 3rem;
+                    height: 1.773rem;
                 }
 
                 @media only screen and (min-width: 1140px) {
-                    width: 56px;
-                    height: 33.09px;
+                    width: 3.5rem;
+                    height: 2.068rem;
                 }
             }
 
@@ -68,7 +67,7 @@ footer {
 
             display: flex;
             align-items: center;
-            column-gap: 56px;
+            column-gap: 3.5rem;
 
             @media only screen and (min-width: 960px) {
                 grid-row: 1;
@@ -77,17 +76,17 @@ footer {
 
             li > a {
                 color: black;
-                font-size: 14px;
-                line-height: 24px;
+                font-size: 0.875rem;
+                line-height: 1.5rem;
                 font-weight: 700;
 
                 @media only screen and (min-width: 960px) {
-                    font-size: 18px;
-                    line-height: 36px;
+                    font-size: 1.125rem;
+                    line-height: 2.25rem;
                 }
 
                 @media only screen and (min-width: 1140px) {
-                    font-size: 20px;
+                    font-size: 1.25rem;
                 }
             }
         }
@@ -99,31 +98,31 @@ footer {
 
             display: flex;
             align-items: center;
-            column-gap: 16px;
+            column-gap: 1rem;
 
             @media only screen and (min-width: 960px) {
                 grid-row: 1;
                 grid-column: 3;
 
-                column-gap: 24px;
+                column-gap: 1.5rem;
             }
 
             @media only screen and (min-width: 1140px) {
-                column-gap: 32px;
+                column-gap: 2rem;
             }
 
             a > img {
-                width: 24px;
-                height: 24px;
+                width: 1.5rem;
+                height: 1.5rem;
 
                 @media only screen and (min-width: 960px) {
-                    width: 28px;
-                    height: 28px;
+                    width: 1.75rem;
+                    height: 1.75rem;
                 }
 
                 @media only screen and (min-width: 1140px) {
-                    width: 32px;
-                    height: 32px;
+                    width: 2rem;
+                    height: 2rem;
                 }
             }
         }
