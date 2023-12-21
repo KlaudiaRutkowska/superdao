@@ -1,0 +1,161 @@
+@import "_reset-css.scss";
+@import "_responsive.scss";
+@import "_fonts.scss";
+@import "variables.scss";
+@import "_header.scss";
+@import "_creators.scss";
+@import "_hero.scss";
+@import "_roadmap-club.scss";
+@import "_learn-more.scss";
+@import "_sponsors.scss";
+@import "_footer.scss";
+
+body {
+    color: white;
+    background-color: $bg;
+}
+
+.container {
+    font-family: PTMono, Helvetica, Arial, sans-serif;
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+button {
+    color: white;
+    font-size: 1rem;
+    line-height: 2rem;
+    font-weight: 700;
+
+    background: $btn-bg-white-opacity;
+    border-width: 0;
+    border-radius: 1rem;
+    padding-inline: 2.25rem;
+    padding-block: 0.5rem;
+    cursor: pointer;
+    transition: box-shadow $hover-transition;
+
+    &:hover {
+        box-shadow: $btn-shadow;
+    }
+
+    @media only screen and (min-width: 960px) {
+        font-size: 1.125rem;
+        line-height: 2.25rem;
+        padding-block: 0.75rem;
+    }
+
+    @media only screen and (min-width: 1140px) {
+        font-size: 1.25rem;
+        padding-inline: 2.5rem;
+        padding-block: 1rem;
+    }
+
+    &.btn-yellow {
+        color: black;
+        background: $btn-bg-yellow;
+
+        &:hover {
+            box-shadow: $btn-shadow-yellow;
+        }
+    }
+
+    &.btn-empty {
+        background: none;
+        border: 0.125rem solid rgba(255, 255, 255, 0.15);
+        border-radius: 0.75rem;
+        padding-inline: 1.25rem;
+        padding-block: 0.5rem;
+
+        @media only screen and (min-width: 960px) {
+            font-size: 0.875rem;
+            line-height: 1.5rem;
+        }
+
+        @media only screen and (min-width: 1140px) {
+            font-size: 1.125rem;
+            line-height: 2rem;
+
+            border-radius: 0.75rem;
+            padding-inline: 1.5rem;
+        }
+    }
+}
+
+a {
+    text-decoration-line: none;
+    color: white;
+}
+
+h2 {
+    font-size: 1.375rem;
+    line-height: 1.625rem;
+    font-weight: 700;
+
+    @media only screen and (min-width: 960px) {
+        font-size: 2.25rem;
+        line-height: 3.75rem;
+    }
+
+    @media only screen and (min-width: 1140px) {
+        font-size: 2.5rem;
+        line-height: 4.375rem;
+    }
+
+    &.underline {
+        font-size: 1.5rem;
+        line-height: 1.75rem;
+        font-weight: 700;
+
+        position: relative;
+
+        @media only screen and (min-width: 960px) {
+            font-size: 2.5rem;
+            line-height: 3.25rem;
+        }
+
+        @media only screen and (min-width: 1140px) {
+            font-size: 3rem;
+            line-height: 5.75rem;
+        }
+
+        &::after {
+            content: "";
+            background-repeat: no-repeat;
+            background-size: contain;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+}
+
+h1,
+h2 {
+    & > span {
+        position: relative;
+        z-index: 0;
+
+        &::after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+}
+
+.hidden {
+    transform: translateX(-50%);
+    opacity: 0;
+    filter: blur(0.3125rem);
+}
+
+.show {
+    transition: transform 1s, opacity 1s, filter 1s;
+    transform: translateX(0);
+    opacity: 1;
+    filter: blur(0);
+    transition-delay: calc(100ms * var(--order));
+}

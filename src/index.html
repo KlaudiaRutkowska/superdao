@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Superdao</title>
+    </head>
+    <body>
+        <header class="container">
+            <a href="#0" class="logo">
+                <img
+                    src="images/logo.svg"
+                    alt="Graphic of main logo with colors"
+                />
+                <p>Superdao</p>
+            </a>
+
+            <button id="hamburger" aria-label="Menu">
+                <div>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </div>
+            </button>
+
+            <nav>
+                <a href="#0" class="logo-menu">
+                    <img
+                        src="images/logo.svg"
+                        alt="Graphic of main logo with colors"
+                    />
+                    <p>Superdao</p>
+                </a>
+
+                <ul>
+                    <li><a href="#0">Roadmap club</a></li>
+                    <li><a href="#0">About</a></li>
+                    <li><a href="#0">Jobs</a></li>
+                </ul>
+
+                <div class="socialmedia">
+                    <button class="twitter">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M22.4 5.54963C21.6344 5.88963 20.812 6.11843 19.9488 6.22163C20.8304 5.69363 21.5064 4.85763 21.8248 3.86083C21.0008 4.34963 20.0872 4.70483 19.1144 4.89683C18.336 4.06723 17.2272 3.54883 16 3.54883C13.6432 3.54883 11.7328 5.46003 11.7328 7.81603C11.7328 8.15043 11.7712 8.47683 11.8432 8.78803C8.29678 8.61043 5.15278 6.91123 3.04718 4.32883C2.68078 4.95923 2.47038 5.69203 2.47038 6.47523C2.47038 7.95523 3.22318 9.26163 4.36798 10.0264C3.66878 10.004 3.01038 9.81203 2.43518 9.49283C2.43518 9.51123 2.43518 9.52803 2.43518 9.54643C2.43518 11.6144 3.90558 13.3392 5.85838 13.7304C5.50078 13.828 5.12318 13.88 4.73358 13.88C4.45918 13.88 4.19118 13.8528 3.93118 13.804C4.47438 15.4992 6.05038 16.7336 7.91758 16.768C6.45758 17.9128 4.61758 18.5952 2.61758 18.5952C2.27358 18.5952 1.93358 18.5752 1.59918 18.5352C3.48798 19.7456 5.73038 20.452 8.14078 20.452C15.9904 20.452 20.2816 13.9496 20.2816 8.31043C20.2816 8.12563 20.2776 7.94163 20.2696 7.75843C21.104 7.15603 21.828 6.40483 22.4 5.54963Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                        <p>Twitter</p>
+                    </button>
+                    <button class="telegram">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M19.6649 3.71706L1.93485 10.5541C0.724851 11.0401 0.731851 11.7151 1.71285 12.0161L6.26485 13.4361L16.7969 6.79106C17.2949 6.48806 17.7499 6.65106 17.3759 6.98306L8.84285 14.6841H8.84085L8.84285 14.6851L8.52885 19.3771C8.98885 19.3771 9.19185 19.1661 9.44985 18.9171L11.6609 16.7671L16.2599 20.1641C17.1079 20.6311 17.7169 20.3911 17.9279 19.3791L20.9469 5.15106C21.2559 3.91206 20.4739 3.35106 19.6649 3.71706Z"
+                                fill="currentColor"
+                            />
+                        </svg>
+                        <p>Telegram</p>
+                    </button>
+                    <button class="email">
+                        <svg
+                            width="24"
+                            height="24"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            xmlns="http://www.w3.org/2000/svg"
+                        >
+                            <path
+                                d="M12 3C7.03201 3 3 7.03201 3 12C3 16.968 7.03201 21 12 21H15.6C16.0971 21 16.5 20.5971 16.5 20.1C16.5 19.603 16.0971 19.2 15.6 19.2H12C8.09401 19.2 4.8 15.906 4.8 12C4.8 8.09401 8.09401 4.8 12 4.8C15.906 4.8 19.2 8.09401 19.2 12V13.287C19.2 13.998 18.561 14.7 17.85 14.7C17.139 14.7 16.5 13.998 16.5 13.287V12C16.5 9.51601 14.484 7.50001 12 7.50001C9.51601 7.50001 7.50001 9.51601 7.50001 12C7.50001 14.484 9.51601 16.5 12 16.5C13.242 16.5 14.376 15.996 15.186 15.177C15.771 15.978 16.779 16.5 17.85 16.5C19.623 16.5 21 15.06 21 13.287V12C21 7.03201 16.968 3 12 3ZM12 14.7C10.506 14.7 9.30001 13.494 9.30001 12C9.30001 10.506 10.506 9.30001 12 9.30001C13.494 9.30001 14.7 10.506 14.7 12C14.7 13.494 13.494 14.7 12 14.7Z"
+                                fill="currentColor"
+                                stroke="currentColor"
+                                stroke-width="0.675001"
+                                clip-path="url(#clip0_6313_9507)"
+                            />
+                            <defs>
+                                <clipPath id="clip0_6313_9507">
+                                    <rect width="24" height="24" fill="currentColor" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                        <p>Email</p>
+                    </button>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            <section id="hero">
+                <div class="container">
+                    <h1 class="hidden" style="--order: 1">
+                        Modern infrastructure for
+                        <span>DAOs</span>
+                    </h1>
+                    <p class="hidden" style="--order: 2">
+                        Superdao makes it easier to start and operate
+                        decentralized autonomous organizations
+                    </p>
+                    <div class="hidden" style="--order: 3">
+                        <button class="btn-yellow">Get started</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="creators">
+                <div class="container">
+                    <div class="wrapper">
+                        <h2 class="underline hidden" style="--order: 1">
+                            Superpowers for <span>creators</span>
+                        </h2>
+
+                        <div class="packs-wrapper">
+                            <div class="pack">
+                                <div class="dots">
+                                    <img
+                                        src="images/dot-full.svg"
+                                        alt="Full dot image"
+                                        class="hidden"
+                                        style="--order: 7"
+                                    />
+                                    <img
+                                        src="images/dot-empty.svg"
+                                        alt="Empty dot image"
+                                        class="hidden"
+                                        style="--order: 6"
+                                    />
+                                    <img
+                                        src="images/dot-empty.svg"
+                                        alt="Empty dot image"
+                                        class="hidden"
+                                        style="--order: 5"
+                                    />
+                                </div>
+                                <h3 class="hidden" style="--order: 4">
+                                    Formation
+                                </h3>
+                                <p class="hidden" style="--order: 3">
+                                    Template-based DAO creation in one click
+                                </p>
+                            </div>
+
+                            <div class="pack">
+                                <div class="dots">
+                                    <img
+                                        src="images/dot-full.svg"
+                                        alt="Full dot image"
+                                        class="hidden"
+                                        style="--order: 6"
+                                    />
+                                    <img
+                                        src="images/dot-full.svg"
+                                        alt="Full dot image"
+                                        class="hidden"
+                                        style="--order: 5"
+                                    />
+                                    <img
+                                        src="images/dot-empty.svg"
+                                        alt="Empty dot image"
+                                        class="hidden"
+                                        style="--order: 4"
+                                    />
+                                </div>
+                                <h3 class="hidden" style="--order: 3">
+                                    Starter pack
+                                </h3>
+                                <p class="hidden" style="--order: 2">
+                                    Member directory and contributor rewards
+                                </p>
+                            </div>
+
+                            <div class="pack">
+                                <div class="dots">
+                                    <img
+                                        src="images/dot-full.svg"
+                                        alt="Full dot image"
+                                        class="hidden"
+                                        style="--order: 5"
+                                    />
+                                    <img
+                                        src="images/dot-full.svg"
+                                        alt="Full dot image"
+                                        class="hidden"
+                                        style="--order: 4"
+                                    />
+                                    <img
+                                        src="images/dot-full.svg"
+                                        alt="Full dot image"
+                                        class="hidden"
+                                        style="--order: 3"
+                                    />
+                                </div>
+                                <h3 class="hidden" style="--order: 2">
+                                    App ecosystem
+                                </h3>
+                                <p class="hidden" style="--order: 1">
+                                    Third-party apps for every need
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="technologies-wrapper">
+                            <div class="apps-wrapper">
+                                <h3 class="hidden">Apps</h3>
+                                <div class="apps-container hidden">
+                                    <div class="app yellow">
+                                        <p>Voting</p>
+                                    </div>
+                                    <div class="app blue">
+                                        <p>Payroll</p>
+                                    </div>
+                                    <div class="app purple">
+                                        <p>Treasury</p>
+                                    </div>
+                                    <div class="app green">
+                                        <p>Grants</p>
+                                    </div>
+                                    <div class="app pink">
+                                        <p>Chat</p>
+                                    </div>
+                                    <div class="app light-green">
+                                        <p>Member updates</p>
+                                    </div>
+                                    <div class="app orange">
+                                        <p>+ more</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="superdao-operating-system-wrapper">
+                                <h3 class="hidden" style="--order: 2">
+                                    Superdao operating system
+                                </h3>
+                                <div
+                                    class="superdao-operating-system-container hidden"
+                                    style="--order: 2"
+                                >
+                                    <div>
+                                        <img
+                                            src="images/icon-ownership.svg"
+                                            alt="Ownership graphic"
+                                        />
+                                        <h4>Ownership</h4>
+                                        <p>
+                                            Tokens, NFTs, promises, options,
+                                            levels
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="images/icon_access.svg"
+                                            alt="Ownership graphic"
+                                        />
+                                        <h4>Access control</h4>
+                                        <p>
+                                            Data access, spending, voting,
+                                            decision execution
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blockchains-wrapper">
+                                <h3 class="hidden" style="--order: 4">
+                                    Blockchains
+                                </h3>
+                                <div
+                                    class="blockchains-container hidden"
+                                    style="--order: 4"
+                                >
+                                    <div>
+                                        <img
+                                            src="images/icon-ethereum.svg"
+                                            alt="Ethereum icon"
+                                        />
+                                        <p>Ethereum</p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="images/icon-binance.svg"
+                                            alt="Binance icon"
+                                        />
+                                        <p>Binance</p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="images/icon-solana.svg"
+                                            alt="Solana icon"
+                                        />
+                                        <p>Solana</p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="images/icon-avalanche.svg"
+                                            alt="Avalanche icon"
+                                        />
+                                        <p>Avalanche</p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="images/icon-terra.svg"
+                                            alt="Terra icon"
+                                        />
+                                        <p>Terra</p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="images/icon-near.svg"
+                                            alt="NEAR icon"
+                                        />
+                                        <p>NEAR</p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="images/icon-polygon.svg"
+                                            alt="Polygon icon"
+                                        />
+                                        <p>Polygon</p>
+                                    </div>
+                                    <div>
+                                        <img
+                                            src="images/icon-more.svg"
+                                            alt="More icon"
+                                        />
+                                        <p>+ more</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="roadmap-club">
+                <div class="container">
+                    <div class="wrapper">
+                        <div
+                            class="roadmap-club-wrapper hidden"
+                            style="--order: 1"
+                        >
+                            <h2>Roadmap club</h2>
+                            <p>
+                                Join DAO creators and tool makers shaping the
+                                future of DAO economy. Meet peers, share your
+                                ideas, and ask for help.
+                            </p>
+
+                            <ul>
+                                <li>Open roadmap for DAO infrastructure</li>
+                                <li>DB with 500+ DAOs and tools</li>
+                                <li>Online and offline meetups</li>
+                            </ul>
+
+                            <div class="button-group">
+                                <button class="btn-yellow">
+                                    Join community
+                                </button>
+                                <button>Learn more</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="learn-more">
+                <div class="container">
+                    <div>
+                        <h2 class="underline hidden" style="--order: 1">
+                            Learn more
+                        </h2>
+
+                        <div class="card-wrapper">
+                            <div class="card hidden" style="--order: 1">
+                                <img
+                                    src="images/learn-more-picture1.jpg"
+                                    alt=""
+                                />
+                                <div class="text-wrapper">
+                                    <p>beginners guide</p>
+                                    <p>DAO Briefing from The Generalist</p>
+                                </div>
+                            </div>
+
+                            <div class="card hidden" style="--order: 2">
+                                <img
+                                    src="images/learn-more-picture2.jpg"
+                                    alt=""
+                                />
+                                <div class="text-wrapper">
+                                    <p>success stories</p>
+                                    <p>The largest DAOs by cap in Deepdao.io</p>
+                                </div>
+                            </div>
+
+                            <div class="card hidden" style="--order: 3">
+                                <img
+                                    src="images/learn-more-picture3.jpg"
+                                    alt=""
+                                />
+                                <div class="text-wrapper">
+                                    <p>directory</p>
+                                    <p>
+                                        Twitter list for DAO ecosystem by Guild
+                                        XYZ
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="sponsors">
+                <div class="container">
+                    <h2 class="underline hidden" style="--order: 1">
+                        Backed by
+                    </h2>
+
+                    <div class="logo-container">
+                        <img
+                            src="./images/logo-fundamental-labs.png"
+                            alt="Fundamental labs logo"
+                            class="logo hidden"
+                            style="--order: 1"
+                        />
+                        <img
+                            src="./images/logo-shima-capital.svg"
+                            alt="Shima capital logo"
+                            class="logo hidden"
+                            style="--order: 2"
+                        />
+                        <img
+                            src="./images/logo-fifty-years.png"
+                            alt="Fifty years logo"
+                            class="logo hidden"
+                            style="--order: 3"
+                        />
+                        <img
+                            src="./images/logo-lemniscap.svg"
+                            alt="Lemniscap logo"
+                            class="logo hidden"
+                            style="--order: 4"
+                        />
+                        <img
+                            src="./images/logo-magic-fund.svg"
+                            alt="Magic fund logo"
+                            class="logo hidden"
+                            style="--order: 5"
+                        />
+                    </div>
+
+                    <div class="buttons-container">
+                        <div class="hidden" style="--order: 1">
+                            <button class="btn-empty">Thomas Chen</button>
+                        </div>
+                        <div class="hidden" style="--order: 2">
+                            <button class="btn-empty">Jesse Clayburgh</button>
+                        </div>
+                        <div class="hidden" style="--order: 3">
+                            <button class="btn-empty">Matt Brezina</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <div class="container">
+                <a href="#0" class="logo">
+                    <img
+                        src="images/logo-black.svg"
+                        alt="Graphic of logo in shades of grey"
+                    />
+                    <p>Superdao</p>
+                </a>
+
+                <ul>
+                    <li><a href="#0">Roadmap club</a></li>
+                    <li><a href="#0">About</a></li>
+                    <li><a href="#0">Jobs</a></li>
+                </ul>
+
+                <div class="social-icons">
+                    <a href="#0">
+                        <img
+                            src="images/icon-twitter-black.svg"
+                            alt="Twitter icon in gray shades"
+                        />
+                    </a>
+                    <a href="#0">
+                        <img
+                            src="images/icon-telegram-black.svg"
+                            alt="Telegram icon in gray shades"
+                        />
+                    </a>
+                    <a href="#0">
+                        <img
+                            src="images/icon-email-black.svg"
+                            alt="Email icon in gray shades"
+                        />
+                    </a>
+                </div>
+            </div>
+        </footer>
+
+        <script type="module" src="./scripts/main.js"></script>
+    </body>
+</html>
