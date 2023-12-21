@@ -4,11 +4,11 @@ header {
     // background-color: black;
     position: fixed;
     z-index: 1;
-    backdrop-filter: blur(20px);
+    backdrop-filter: blur(1.25rem);
     // -webkit-mask: linear-gradient(to top, transparent, black 50%);
 
-    padding-top: 16px;
-    padding-bottom: 16px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,8 +16,8 @@ header {
     font-weight: 700;
 
     @media only screen and (min-width: 960px) {
-        padding-top: 46px;
-        padding-bottom: 46px;
+        padding-top: 2.875rem;
+        padding-bottom: 2.875rem;
     }
 
     .logo {
@@ -26,17 +26,17 @@ header {
         column-gap: 0.813rem;
 
         img {
-            width: 35.78px;
-            height: 21.14px;
+            width: 2.236rem;
+            height: 1.321rem;
 
             @media only screen and (min-width: 960px) {
-                width: 47.7px;
-                height: 28.18px;
+                width: 2.981rem;
+                height: 1.761rem;
             }
 
             @media only screen and (min-width: 1140px) {
-                width: 60px;
-                height: 35px;
+                width: 3.75rem;
+                height: 2.188rem;
             }
         }
 
@@ -62,14 +62,18 @@ header {
         position: relative;
         z-index: 2;
         display: block;
-        width: 40px;
-        height: 40px;
+        width: 2.5rem;
+        height: 2.5rem;
         background-color: transparent;
         border-width: 0;
 
+        &:hover {
+            box-shadow: none;
+        }
+
         div {
             display: block;
-            width: 24px;
+            width: 1.5rem;
             position: absolute;
             left: 50%;
             top: 50%;
@@ -78,20 +82,20 @@ header {
             span {
                 position: absolute;
                 display: block;
-                width: 24px;
-                height: 2px;
+                width: 1.5rem;
+                height: 0.125rem;
                 background-color: #fff;
                 transition-duration: 500ms;
                 transition-timing-function: ease-in-out;
 
                 &:first-child {
                     transition-property: transform;
-                    transform: translateY(-6px);
+                    transform: translateY(-0.375rem);
                 }
 
                 &:last-child {
                     transition-property: transform;
-                    transform: translateY(6px);
+                    transform: translateY(0.375rem);
                 }
             }
         }
@@ -125,11 +129,11 @@ header {
     }
 
     nav {
-        padding-inline: 20px;
-        padding-top: 65px;
+        padding-inline: 1.25rem;
+        padding-top: 4.063rem;
         display: flex;
         flex-direction: column;
-        row-gap: 32px;
+        row-gap: 2rem;
         align-items: stretch;
         visibility: hidden;
         position: absolute;
@@ -153,7 +157,7 @@ header {
             flex-direction: row;
             align-items: center;
             justify-content: end;
-            column-gap: 4rem;
+            column-gap: 3.875rem;
             visibility: visible;
             height: auto;
             background-color: transparent;
@@ -161,39 +165,79 @@ header {
         }
 
         ul {
-            font-size: 15px;
-            line-height: 32px;
+            font-size: 0.938rem;
+            line-height: 2rem;
 
             display: flex;
             flex-direction: column;
-            row-gap: 16px;
+            row-gap: 1rem;
             column-gap: 0;
-            padding-top: 20px;
+            padding-top: 1.25rem;
             list-style-type: none;
 
             @media only screen and (min-width: 960px) {
-                font-size: 18px;
-                line-height: 36px;
+                font-size: 1.125rem;
+                line-height: 2.25rem;
 
                 position: static;
                 flex-direction: row;
                 row-gap: 0;
-                column-gap: 40px;
+                column-gap: 1.25rem;
                 padding-top: 0;
             }
 
             @media only screen and (min-width: 1140px) {
-                column-gap: 52px;
+                column-gap: 2rem;
             }
 
-            li {
-                @media only screen and (max-width: 959px) {
-                    background-color: $bg-nav-li;
-                    border-radius: 12px;
+            li > a {
+                display: block;
+                position: relative;
+                background-color: $bg-nav-li;
+                border-radius: 0.75rem;
 
-                    padding-top: 10px;
-                    padding-bottom: 10px;
-                    padding-left: 20px;
+                padding-top: 0.625rem;
+                padding-bottom: 0.625rem;
+                padding-left: 1.25rem;
+
+                transition: background-color $hover-transition;
+
+                &::before {
+                    content: "";
+                    display: none;
+                    position: absolute;
+                    opacity: 0;
+                    left: -0.25rem;
+                    right: -0.125rem;
+                    height: 0.625rem;
+                    bottom: .5rem;
+                    z-index: -1;
+                    background: linear-gradient(to right, #533CA3 1.85%, #BF5AB8 30.47%, #ED641F 68.15%, #FFE322 99.01%);
+                    clip-path: polygon(50% 3%, 35% 4%, 31% 2%, 27% 1%, 24% 5%, 23% 3%, 16% 3%, 12% 7%, 9% 11%, 5% 14%, 2% 18%, 1% 21%, 1% 27%, 4% 24%, 8% 25%, 6% 29%, 3% 31%, 1% 33%, 2% 36%, 3% 38%, 5% 38%, 4% 45%, 2% 45%, 1% 42%, 1% 47%, 1% 51%, 2% 49%, 4% 51%, 4% 55%, 1% 57%, 1% 58%, 4% 63%, 6% 73%, 3% 70%, 1% 68%, 0% 85%, 4% 88%, 4% 93%, 2% 97%, 4% 100%, 8% 99%, 10% 94%, 12% 100%, 13% 100%, 16% 100%, 19% 98%, 21% 100%, 24% 98%, 24% 97%, 23% 93%, 24% 94%, 25% 94%, 26% 100%, 25% 100%, 28% 100%, 28% 99%, 29% 99%, 31% 95%, 32% 97%, 32% 100%, 34% 100%, 37% 100%, 38% 94%, 41% 96%, 43% 98%, 47% 99%, 47% 97%, 48% 93%, 52% 96%, 52% 97%, 53% 100%, 56% 100%, 57% 98%, 56% 97%, 57% 94%, 60% 93%, 64% 100%, 66% 99%, 66% 94%, 66% 92%, 69% 91%, 69% 94%, 70% 97%, 71% 100%, 74% 97%, 76% 96%, 82% 99%, 83% 98%, 85% 94%, 88% 93%, 91% 93%, 94% 93%, 96% 95%, 95% 100%, 98% 100%, 99% 96%, 99% 92%, 97% 90%, 96% 89%, 99% 82%, 99% 79%, 97% 79%, 95% 79%, 95% 80%, 97% 68%, 98% 68%, 99% 67%, 99% 66%, 98% 60%, 98% 60%, 99% 56%, 100% 56%, 99% 51%, 98% 45%, 99% 41%, 99% 38%, 99% 35%, 97% 33%, 97% 32%, 98% 26%, 98% 25%, 95% 23%, 93% 21%, 95% 15%, 96% 11%, 95% 10%, 93% 8%, 90% 9%, 85% 10%, 76% 4%, 75% 7%, 65% 11%, 56% 6%, 61% 7%, 59% 9%);
+
+                    transition: opacity $hover-transition;
+                }
+
+                &:hover {
+                    background-color: $bg-nav-li-hover;
+                }
+
+                @media only screen and (min-width: 960px) {
+                    display: inline;
+                    background-color: transparent;
+                    padding: 0.625rem;
+
+                    &::before {
+                        display: block;
+                    }
+
+                    &:hover {
+                        background-color: transparent;
+
+                        &::before {
+                            opacity: 1;
+                        }
+                    }
                 }
             }
         }
@@ -210,15 +254,15 @@ header {
             }
 
             img {
-                width: 64px;
-                height: 38px;
+                width: 4rem;
+                height: 2.375rem;
             }
 
             p {
-                font-size: 21px;
+                font-size: 1.313rem;
                 font-weight: 700;
                 line-height: 200%;
-                letter-spacing: 0.384px;
+                letter-spacing: 0.024rem;
             }
         }
 
@@ -226,62 +270,85 @@ header {
             display: flex;
             flex-direction: column;
             align-items: stretch;
-            row-gap: 16px;
+            row-gap: 1rem;
 
             .twitter,
             .telegram,
             .email {
-                background-color: rgba($color: #fff, $alpha: 0.1);
+                background-color: $bg-nav-li;
                 color: white;
                 font-weight: 700;
-                font-size: 15px;
-                line-height: 32px;
+                font-size: 0.938rem;
+                line-height: 2rem;
 
                 display: flex;
+                flex-direction: row-reverse;
                 justify-content: space-between;
                 align-items: center;
                 column-gap: 0.5rem;
                 border-width: 0;
-                border-radius: 12px;
+                border-radius: .75rem;
 
-                padding-top: 10px;
-                padding-bottom: 10px;
-                padding-inline: 20px;
+                padding-top: 0.625rem;
+                padding-bottom: 0.625rem;
+                padding-inline: 1.25rem;
                 cursor: pointer;
 
-                svg.icon-left {
-                    display: none;
+                transition: background-color $hover-transition;
+
+                &:hover {
+                    box-shadow: none;
+                    background-color: $bg-nav-li-hover;
                 }
 
-                svg.icon-right {
-                    display: block;
+                svg {
+                    transition: color $hover-transition;
+                    color: $svg-base-color;
                 }
 
                 @media only screen and (min-width: 960px) {
-                    font-size: 16px;
-                    line-height: 28px;
+                    font-size: 1rem;
+                    line-height: 1.75rem;
 
+                    flex-direction: row;
                     justify-content: start;
-                    padding-top: 6px;
-                    padding-bottom: 6px;
-                    padding-left: 12px;
-                    padding-right: 16px;
+                    padding-top: 0.375rem;
+                    padding-bottom: 0.375rem;
+                    padding-left: 0.75rem;
+                    padding-right: 1rem;
 
-                    border-radius: 8px;
+                    border-radius: .5rem;
                     background-color: $bg-btn-twitter;
 
-                    svg.icon-left {
-                        display: block;
-                    }
+                    transition: box-shadow $hover-transition;
 
-                    svg.icon-right {
-                        display: none;
+                    &:hover {
+                        box-shadow: $btn-shadow;
+                        background-color: $bg-btn-twitter;
                     }
+                }
+            }
 
-                    &.email,
-                    &.telegram {
-                        display: none;
-                    }
+            .twitter:hover svg {
+                color: $twitter-color;
+            }
+
+            .telegram:hover svg {
+                color: $telegram-color;
+            }
+
+            .email:hover svg {
+                color: $orange-dot;
+            }
+
+            @media only screen and (min-width: 960px) {
+                .twitter svg {
+                    color: $twitter-color;
+                }
+
+                .email,
+                .telegram {
+                    display: none;
                 }
             }
         }

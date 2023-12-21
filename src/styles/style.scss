@@ -24,50 +24,61 @@ body {
 
 button {
     color: white;
-    font-size: 16px;
-    line-height: 32px;
+    font-size: 1rem;
+    line-height: 2rem;
     font-weight: 700;
 
     background: $btn-bg-white-opacity;
     border-width: 0;
-    border-radius: 16px;
-    padding-inline: 40px;
-    padding-block: 16px;
+    border-radius: 1rem;
+    padding-inline: 2.25rem;
+    padding-block: 0.5rem;
     cursor: pointer;
+    transition: box-shadow $hover-transition;
+
+    &:hover {
+        box-shadow: $btn-shadow;
+    }
 
     @media only screen and (min-width: 960px) {
-        font-size: 18px;
-        line-height: 36px;
+        font-size: 1.125rem;
+        line-height: 2.25rem;
+        padding-block: 0.75rem;
     }
 
     @media only screen and (min-width: 1140px) {
-        font-size: 20px;
+        font-size: 1.25rem;
+        padding-inline: 2.5rem;
+        padding-block: 1rem;
     }
 
     &.btn-yellow {
         color: black;
         background: $btn-bg-yellow;
-        box-shadow: $btn-shadow-yellow;
+
+        &:hover {
+            box-shadow: $btn-shadow-yellow;
+        }
     }
 
     &.btn-empty {
         background: none;
-        border: 2px solid rgba(255, 255, 255, 0.15);
-        border-radius: 12px;
-        padding-inline: 20px;
-        padding-block: 8px;
+        border: 0.125rem solid rgba(255, 255, 255, 0.15);
+        border-radius: 0.75rem;
+        padding-inline: 1.25rem;
+        padding-block: 0.5rem;
 
         @media only screen and (min-width: 960px) {
-            font-size: 14px;
-            line-height: 24px;
+            font-size: 0.875rem;
+            line-height: 1.5rem;
         }
 
         @media only screen and (min-width: 1140px) {
-            font-size: 18px;
-            line-height: 32px;
+            font-size: 1.125rem;
+            line-height: 2rem;
 
-            border-radius: 12px;
-            padding-inline: 24px;
+            border-radius: 0.75rem;
+            padding-inline: 1.5rem;
         }
     }
 }
@@ -78,35 +89,35 @@ a {
 }
 
 h2 {
-    font-size: 22px;
-    line-height: 26px;
+    font-size: 1.375rem;
+    line-height: 1.625rem;
     font-weight: 700;
 
     @media only screen and (min-width: 960px) {
-        font-size: 36px;
-        line-height: 60px;
+        font-size: 2.25rem;
+        line-height: 3.75rem;
     }
 
     @media only screen and (min-width: 1140px) {
-        font-size: 40px;
-        line-height: 70px;
+        font-size: 2.5rem;
+        line-height: 4.375rem;
     }
 
     &.underline {
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 1.5rem;
+        line-height: 1.75rem;
         font-weight: 700;
 
         position: relative;
 
         @media only screen and (min-width: 960px) {
-            font-size: 40px;
-            line-height: 52px;
+            font-size: 2.5rem;
+            line-height: 3.25rem;
         }
 
         @media only screen and (min-width: 1140px) {
-            font-size: 48px;
-            line-height: 92px;
+            font-size: 3rem;
+            line-height: 5.75rem;
         }
 
         &::after {
@@ -119,7 +130,8 @@ h2 {
     }
 }
 
-h1, h2 {
+h1,
+h2 {
     & > span {
         position: relative;
         z-index: 0;
@@ -135,13 +147,13 @@ h1, h2 {
 }
 
 .hidden {
-    transition: all 1s;
     transform: translateX(-50%);
     opacity: 0;
-    filter: blur(5px);
+    filter: blur(0.3125rem);
 }
 
 .show {
+    transition: transform 1s, opacity 1s, filter 1s;
     transform: translateX(0);
     opacity: 1;
     filter: blur(0);
